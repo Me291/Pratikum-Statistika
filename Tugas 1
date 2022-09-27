@@ -1,0 +1,10 @@
+data_elen = read.elim("clipboard")
+View(data_elen)
+mean(data_elen$Tinggi.badan
+str(data_elen)
+data_Book_csv = read.csv("C:/DataBook.csv")
+view(data_Book_csv)
+str(data_Book_csv)
+install.packages("xlsx")
+Library("xlsx")
+Data_Tegar_xlsx = read.xlsx("C:/DataTegar.xlsx",1)
