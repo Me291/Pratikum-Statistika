@@ -1,0 +1,62 @@
+#Latihan 1
+
+#1
+data_nama = read.csv("C:/houseprices.csv")
+View(data_nama)
+#2
+nama <- data_nama[data_nama$Bedrooms==2,]  
+View(nama)
+#3
+nama$Bathrooms <- ifelse(nama$Bathrooms > 2, c("large"), c("small"))
+View(nama)
+#4
+nama$newvariable <- ifelse(nama$Offers > 2, c("large"), c("small")) 
+View(nama)
+nama$newvariable <- nama$Price/nama$SqFt
+View(nama)
+#5
+nama$newvariable<-NULL
+#6
+data_nama.kolom1dan2 <- data_nama[,1:2] 
+View(data_nama.kolom1dan2)
+data_nama.kolom3dan4 <- data_nama[,3:4] 
+View(data_nama.kolom3dan4)
+data_nama.kolom1sd4<-cbind(data_nama.kolom1dan2, data_nama.kolom3dan4) 
+View(data_nama.kolom1sd4)
+#7
+data_nama.baris1sd3 <- data_nama[1:3,] 
+data_nama.baris4sd6 <- data_nama[4:6,] 
+data_nama.baris1sd6 <- rbind(data_nama.baris1sd3, data_nama.baris4sd6) 
+View(data_nama.baris1sd6)
+#8
+data_nama.sort<-data_nama[order(data_nama$Price),] 
+View(data_nama.sort)
+
+#Latihan 2
+
+tegar = read.csv("C:/Data.csv")
+View(tegar)
+tegar<- data_tegar[data_tegar$"TINGGI.BADAN" > 150,]  
+View(tegar)
+tegar$TINGGI.BADAN <- ifelse(tegar$TINGGI.BADAN >165, c("Tinggi"), c("Pendek"))
+View(tegar)
+tegar$JURUSAN <- "Infor20"
+View(tegar)
+tegar$FAKULTAS <- "FTI"
+View(tegar)
+tegar$FAKULTAS <- NULL
+View(tegar)
+tegar.kolom1dan2 <- tegar[,1:2]
+View(tegar.kolom1dan2)
+tegar.kolom3dan4 <- tegar[,3:4]
+View(tegar.kolom3dan4)
+tegar.kolom1sd4<-cbind(tegar.kolom1dan2, tegar.kolom3dan4)
+View(tegar.kolom1sd4)
+tegar.baris1sd5 <- tegar[1:5,]
+View(tegar.baris1sd5)
+tegar.baris25sd30 <- tegar[25:30,]
+View(tegar.baris25sd30)
+tegar.gabungan <- rbind(tegar.baris1sd5, tegar.baris25sd30)
+View(tegar.gabungan)
+tegar.sort<-tegar[order(tegar$WAKTU.PERJALANAN),]
+View(tegar.sort)
