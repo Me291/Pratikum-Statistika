@@ -1,0 +1,13 @@
+dataku = read.delim("clipboard")
+View(dataku)
+
+t.test(dataku$Volume, conf.level = 0.9)
+
+t.test(dataku$Volume, conf.level = 0.90)
+
+dataku = read.delim("clipboard")
+View(dataku)
+
+t.test(dataku$Volume, conf.level = 0.5)
+
+t.test(dataku$Volume, conf.level = 0.50)
