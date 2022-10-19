@@ -1,0 +1,5 @@
+dataku = read.delim("clipboard")
+View(dataku)
+str(dataku)
+mean(dataku$Pendapatan)
+t.test(dataku$Pendapatan, mu = 14500)
