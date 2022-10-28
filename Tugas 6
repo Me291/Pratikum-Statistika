@@ -1,0 +1,42 @@
+#Latihan 1 
+
+summary(houseprices)
+head(iris)
+by(iris$Petal.Length, iris$Species, summary)
+mean(iris$Sepal.Length)
+var(iris$Sepal.Length)
+boxplot(iris$Petal.Length)
+boxplot(Petal.Length ~ Species, data=iris, main="Petal Length", xlab="Species", ylab="Length")
+hist(iris$Petal.Length)
+hist(iris$Sepal.Width)
+hist(iris$Sepal.Width[iris$Species=="setosa"])
+hist(iris$Sepal.Width[iris$Species=="versicolor"])
+d=density(iris$Petal.Length)
+plot(d)
+d=density(iris$Sepal.Width[iris$Species=="versicolor"])
+plot (d)
+install.packages("ggplot2")
+
+library(ggplot2)
+data_mas=read.csv("C:/DirectMarketing.csv")
+View(data_mas)
+qplot(data_mas$AmountSpent, data_mas$Salary)
+plot(data_mas$AmountSpent, data_mas$Salary)
+
+#Latihan 2 
+
+data_mas=read.csv("C:/Users/tegar/Downloads/DirectMarketing.csv")
+View(data_mas)
+hist(data_mas$AmountSpent)
+hist(data_mas$AmountSpent[data_mas$Location=="Close"])
+hist(data_mas$AmountSpent[data_mas$Location=="Far"])
+d=density(data_mas$AmountSpent)
+plot(d)
+d=density(data_mas$AmountSpent[data_mas$Location=="Far"])
+plot (d)
+
+data_get = read.csv("C:/Users/tegar/Downloads/houseprices.csv")
+View(data_get)
+library(ggplot2)
+qplot(data_get$Price, data_get$Offers)
+plot(data_get$Price, data_get$Offers)
